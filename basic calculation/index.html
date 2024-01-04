@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculation</title>
+</head>
+<body>
+    <script>
+        function calculater() {
+            let inp = document.getElementById("number1").value;
+            let inp2 = document.getElementById("number2").value;
+            let operator = document.getElementById("select").value;
+            let input1 = parseInt(inp);
+            let input2 = parseInt(inp2);
+            if (operator == "+") {
+                document.getElementById("demo").innerHTML = input1 + input2;
+            }
+            else if (operator == "-") {
+                document.getElementById("demo").innerHTML = input1 - input2;
+            }
+            else if (operator == "*") {
+                document.getElementById("demo").innerHTML = input1 * input2;
+            }
+            else if (operator == "/") {
+                document.getElementById("demo").innerHTML = input1 / input2;
+            }
+            else if (operator == "%") {
+                document.getElementById("demo").innerHTML = input1 % input2;
+            }
+            else {
+                document.getElementById("demo").innerHTML = "enter number"
+            }
+
+
+
+        }
+        // 1 //
+        function enter() {
+            let swipe1 = document.getElementById("var1").value;
+            let swipe2 = document.getElementById("var2").value;
+            let swippe1 = parseInt(swipe1);
+            let swippe2 = parseInt(swipe2);
+
+            document.getElementById("demo2").innerHTML = "the value of A is " + " " + swippe1 + " <br>the value of B is " + " " + swippe2;
+            let t = swippe1;
+            swippe1 = swippe2;
+            swippe2 = t;
+
+            console.log(swippe1);
+            console.log(swippe2);
+        }
+        // 2 //
+        function swiping() {
+            let swipe1 = document.getElementById("var1").value;
+            let swipe2 = document.getElementById("var2").value;
+            let swippe1 = parseInt(swipe1);
+            let swippe2 = parseInt(swipe2);
+
+            document.getElementById("demo2").innerHTML = "the value of A is " + " " + swippe1 + " <br>the value of B is " + " " + swippe2;
+            let t = swippe1;
+            swippe1 = swippe2;
+            swippe2 = t;
+
+            console.log(swippe1);
+            console.log(swippe2);
+
+            document.getElementById("demo2").innerHTML = "the value of A is " + " " + swippe1 + " <br>the value of B is " + " " + swippe2;
+        }
+        // 3 //
+        function updateTemperature(unit) {
+            if (unit === "CEL") {
+                let c = document.getElementById("cel").value;
+                let c2 = parseInt(c);
+                let f = (c * 9 / 5) + 32;
+                document.getElementById("fah").value = f;
+            }
+            if (unit === 'FAH') {
+                let f = document.getElementById("fah").value;
+                let f2 = parseInt(f);
+                let c = (f2 - 32) * 5 / 9;
+                document.getElementById("cel").value = c.toFixed(4);
+            }
+        }
+        // 4 //
+        function salary() {
+            let base = parseInt(document.getElementById("base").value);
+            let hra = parseInt(document.getElementById("hra").value);
+            let da = parseInt(document.getElementById("da").value);
+            let ta = parseInt(document.getElementById("ta").value);
+            let hravalue = (hra / 100) * base;
+            let davalue = (da / 100) * base;
+            let taravalue = (ta / 100) * base;
+            let salary = base + hravalue + davalue + taravalue;
+            document.getElementById("demo6").innerHTML = `your gross salary is ${salary} ₹`
+
+        }
+        // 5 //
+        function circle() {
+            let rvalue = parseInt(document.getElementById("rvalue").value);
+            let areaofcircle = Math.PI * rvalue * rvalue;
+            document.getElementById("demo7").innerHTML = `the area of circle is ${areaofcircle.toFixed(2)}`
+        }
+        // 6 //
+        function triangle() {
+            let bvalue = parseInt(document.getElementById("bvalue").value);
+            let hvalue = parseInt(document.getElementById("hvalue").value);
+
+            let trianglearea = 0.5 * bvalue * hvalue;
+            document.getElementById("demo8").innerHTML = `the area of triangle is ${trianglearea.toFixed(2)}`
+        }
+        // 7 //
+        function interest() {
+            let amount = parseInt(document.getElementById("amount").value);
+            let rate = parseInt(document.getElementById("rate").value);
+            let time = parseInt(document.getElementById("period").value);
+            let result8 = (amount * rate * time) / 100;
+            document.getElementById("demo9").innerHTML = `the interest is ${result8} ₹`;
+
+        }
+        function rate() {
+            let interest = parseInt(document.getElementById("interest1").value);
+            let amount = parseInt(document.getElementById("amount1").value);
+
+            let time = parseInt(document.getElementById("period1").value);
+            let r = (interest * 100) / (amount * time)
+            document.getElementById("demo10").innerHTML = `the interest is ${r} %`;
+
+        }
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"> </script>
+
+
+</html>

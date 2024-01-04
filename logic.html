@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetition logic</title>
+</head>
+<body>
+    <script>
+        // 1 //
+        let i=-2;
+        if(i>0)
+        {
+            console.log("number is positive")
+        }
+        else{
+            console.log("number is negative");
+        }
+        // 2 //
+        let n=14;
+        if(n%2==0)
+        {
+            console.log("number is even");
+        }
+        else{
+            console.log("number is odd");
+        }
+        // 3 //
+        let m=1225;
+        if(m%4==0)
+        {
+            console.log("This is Leap Year");
+        }
+        else
+        {
+            console.log("This is not Leap year");
+        }
+        // 4 //
+        let num1=84;
+        let num2=58;
+        let num3=15;
+        let num4=26;
+        if(num1>num2)
+        {
+            if(num1>num3)
+            {
+                if(num1>num4)
+                {
+                    console.log("num1 is Greater");
+                }
+                else
+                {
+                    console.log("num4 is Greater");
+                }
+            }
+            else
+            {
+                if(num3>num4)
+                {
+                    console.log("num3 is Greater");
+                }
+                else
+                {
+                    console.log("num4 is Greater");
+                }
+            }
+        }
+        else
+        {
+            if(num2>num3)
+            {
+                if(num2>num4)
+                {
+                    console.log("num2 is Greater");
+                }
+                else
+                {
+                    console.log("num4 is Greater");
+                }
+            }
+            else
+            {
+                if(num3>num4)
+                {
+                    console.log("num3 is Greater");
+                }
+                else
+                {
+                    console.log("num4 is Greater");
+                }
+            }
+        }
+        // 5 //
+        let age = 18;
+        if(age>=18)
+        {
+            console.log("Yes, You are mature for vote");
+        }
+        else if(age<18)
+        {
+            console.log("No, You can't vote");
+        }
+        else
+        {
+            console.log("Please Enter Your Valid Age");
+        }
+        // 6 //
+        let phy = 89;
+        let che = 87;
+        let bio = 98;
+        let math = 95;
+        let com = 85;
+        let res = (phy + che + bio + math + com)/ 500 * 100;
+        if(res >= 90)
+        {
+            console.log("Grade A");
+        }
+        else if(res >= 80 && res < 90)
+        {
+            console.log("Grade B");
+        }
+        else if(res >= 70 && res < 80)
+        {
+            console.log("Grade C");
+        }
+        else if(res >= 60 && res < 70)
+        {
+            console.log("Grade D");
+        }
+        else if(res >= 50 && res < 60)
+        {
+            console.log("Grade E");
+        }
+        else if(res >= 40 && res < 50)
+        {
+            console.log("Grade F");
+        }
+        else
+        {
+            console.log("FAIL");
+        }
+        // 7 //
+        let input1 = 8;
+
+        switch (input1)
+        {
+            case 1:
+                   console.log("January")
+                   break;
+            case 2:
+                   console.log("February")
+                   break;
+            case 3:
+                   console.log("March")
+                   break; 
+            case 4:
+                   console.log("April")
+                   break;
+            case 5:
+                   console.log("May")
+                   break;
+            case 6:
+                   console.log("June")
+                   break;
+            case 7:
+                   console.log("July")
+                   break;
+            case 8:
+                   console.log("August")
+                   break;
+            case 9:
+                   console.log("September")
+                   break;
+            case 10:
+                   console.log("October")
+                   break;
+            case 11:
+                   console.log("november")
+                   break;
+            case 12:
+                   console.log("December")
+                   break;
+            default:
+                    console.log("Please Enter Numeric Number");     
+        }
+        // 8 //
+        function week() {
+        let input1 = document.getElementById("week").value;
+        if (input1 === "m"){
+        document.getElementById("demo8").innerHTML = "MONDAY";
+        }
+        else if (input1 === "T") {
+            document.getElementById("demo8").innerHTML = "TUESDAY";
+        }
+        else if (input1 === "W") {
+            document.getElementById("demo8").innerHTML = "WEDNESDAY";
+        }
+        else if (input1 === "TH") {
+            document.getElementById("demo8").innerHTML = "THURSDAY";
+        }
+        else if (input1 === "F") {
+            document.getElementById("demo8").innerHTML = "FRIDAY";
+        }
+        else if (input1 === "S") {
+            document.getElementById("demo8").innerHTML = "SETURDAY";
+        }
+        else if (input1 === "SU") {
+            document.getElementById("demo8").innerHTML = "SUNDAY";
+        }
+        else {
+            document.getElementById("demo8").innerHTML = "ENTER LETTER";
+        }
+    }
+        // 9 //
+        let a=25;
+        let b=23;
+        let c=56;
+        let d=54;
+        if(a>b)
+        {
+            if(a>c)
+            {
+                if(a>d)
+                {
+                    console.log("A is maximum");
+                }
+                else
+                {
+                    console.log("D is maximum");
+                }
+            }
+            else
+            {
+                if(c>d)
+                {
+                    console.log("C is maximum");
+                }
+                else
+                {
+                    console.log("D is maximum");
+                }
+            }
+        }
+        else
+        {
+            if(b>c)
+            {
+                if(b>d)
+                {
+                    console.log("B is maximum");
+                }
+                else
+                {
+                    console.log("D is maximum");
+                }
+            }
+            else
+            {
+                if(c>d)
+                {
+                    console.log("C is maximum");
+                }
+                else
+                {
+                    console.log("D is maximum");
+                }
+            }    
+        }
+        // 10 //
+        function basiccalculator(k, l, input){
+            switch(input){
+                case "+":
+                    return k + l;
+                case "-":
+                    return k - l;
+                case "*":
+                    return k * l;
+                case "/":
+                    return k / l;
+            }
+        }
+        let k = 10;
+        let l = 5;
+        let operation = "+";
+        let suma = basiccalculator(k, l, operation);
+        console.log("suma", k, operation, l, "=", suma);
+        // 11 //
+        function ifcal() {
+        let inp3 = parseInt(document.getElementById("inp3").value);
+        let inp4 = parseInt(document.getElementById("inp4").value);
+        let opt2 = document.getElementById("opt2").value;
+        if (opt2 == "+") {
+            document.getElementById("span3").innerHTML = inp3 + inp4;
+        }
+        else if (opt2 == "-") {
+            document.getElementById("span3").innerHTML = inp3 - inp4;
+        }
+        else if (opt2 == "*") {
+            document.getElementById("span3").innerHTML = inp3 * inp4;
+        }
+        else if (opt2 == "/") {
+            document.getElementById("span3").innerHTML = inp3 / inp4;
+        }
+        else {
+            document.getElementById("span3").innerHTML = "enter number"
+        }
+    }   
+        // 12 //
+        let answer1=45;
+        let answer2=45;
+        let answer3=45;
+        let sum = answer1+answer2+answer3;
+
+        if(sum == 180)
+        {
+            console.log("This is Valid Triangle");
+        }
+        else
+        {
+            console.log("This is Not Valid Triangle");
+        }
+    </script>
+</body>
+</html>

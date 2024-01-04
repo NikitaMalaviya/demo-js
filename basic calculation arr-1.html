@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic calculation arr-1</title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+
+        // sort
+        let arr = ["php","angular js","anroid","ruby","python"].sort()
+        console.log(arr);
+
+        // reverse
+        let arr2 = ["php","angular js","anroid","ruby","python"].reverse()
+        console.log(arr2);
+
+        // remove last element
+        let arr3 = ["php","angular js","anroid","ruby","python"]
+        let arr4 = arr3.pop()
+        console.log(arr4);
+
+        // first element add
+        let arr5 = ["php","angular js","anroid","ruby","python"]
+        let arr6 = arr5.unshift("nord js")
+        console.log(arr5);
+
+        // convert upper to lowercase
+        let str = "NIKITA MALAVIYA"
+        let upper = str.toLowerCase()
+        console.log(upper);
+        let str2 = "nikita malaviya"
+        let lower = str2.toUpperCase()
+        console.log(lower);
+
+        // convert string to array
+        let str3 = "welcome to the company"
+        let arr7 = str3.split(" ")
+        console.log(arr7);
+
+        // all array element sum (map method)
+        // let num = [23,4,5,77,56,1,23,7,8,4]
+        // let sum1 = 0
+        // let sum = num.map((p) => {
+        //     sum1 = sum1 + p
+        //     return sum1
+        // })
+        // console.log(sum);
+        let num2 = [23,4,5,77,56,1,23,7,8,4]
+        let sum2 = num2.reduce((p, q) => {
+            return p + q
+        })
+        console.log(num2);
+        console.log(sum2);
+
+        // all negative array element (filter method)
+        let arr8 = [3,6,9,41,-58,-44,-23,85,1,-5,66]
+        let negative = arr8.filter((p) => p < 0)
+        console.log(negative);
+
+        // convert array to string
+        let arr9 = ["php","angular js","anroid","ruby","python"].toString()
+        console.log(arr9); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+
+    <input type="text" name="" id="item">
+    <button onclick="add()">Add</button>
+    <button onclick="clearItem()">Cler</button>
+    <script>
+      const ul = document.querySelector("ul");
+      const list = localStorage.getItem("product")
+        ? JSON.parse(localStorage.getItem("product"))
+        : [];
+      const add = () => {
+        // const arr = [];
+        const item = document.getElementById("item").value;
+
+        list.push(item);
+        localStorage.setItem("product", JSON.stringify(list));
+        console.log(localStorage);
+
+        addItem(item);
+      };
+
+      list.forEach(addItem);
+
+      function addItem(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      }
+
+      function clearItem() {
+        localStorage.clear();
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

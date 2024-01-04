@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol></ol>
+    <input type="text" name="" id="items">
+    <button onclick="add()">Add</button>
+    <button onclick="clearitem()">clear</button>
+    <script>
+        const ol = document.querySelector("ol");
+        const menu = localStorage.getItem("product")
+            ? JSON.parse(localStorage.getItem("product"))
+            :[];
+        const add = () =>{
+            const item = document.getElementById("items").value;
+
+            menu.push(items);
+            localStorage.setItem("product", JSON.stringify(menu));
+            console.log(localStorage);
+
+            addItem(items);
+        };
+
+        menu.forEach(addItem);
+
+        function addItem(items){
+            const ul = document.createElement("ul");
+            ul.textContent = items;
+            ol.appendChild(ul);
+        }
+
+        function clearitem(){
+            localStorage.clear();
+            location.reload();
+        }
+    </script>
+</body>
+</html>
